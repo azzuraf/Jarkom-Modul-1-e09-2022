@@ -41,3 +41,15 @@
 2. Lakukan ping menggunakan cmd dengan command “ipconfig” untuk mengetahui ip kita
 3. Masukkan filter pada wireshark dengan command “ip.src == <ip yang digunakan>” `ip.src==10.8.108.197`
 7. Hasil:![Dokumentasi soal nomor 7](./dokumentasi/7.png)
+# Nomor 8
+1. Buka packet yang berisikan percakapan antara dua mahasiswa dan lakukan follow tcp stream
+2. Hasil:![Dokumentasi soal nomor 8](./dokumentasi/8.png)
+# Nomor 9
+1. Karena petunjuknya kecurangan dilakukan di port 9002, maka filter port 9002 tcp.port == 9002
+2. Hasil:![Dokumentasi soal nomor 9](./dokumentasi/9.png)
+3. Follow tcp stream, kemudian ke stream 29, terdapat salt yang desediakan, tampilkan as raw dan save menjadi nama_kelompok.des3 (E09) `(53616c7465645f5fbf3adfafa4884228ce051bd1f6c12445a416e84b29c1d63c3c081b
+8bb9fcf566209587961317e142ff4734e4da2bcbcf)`
+4. Untuk mendecrypt, dibutuhkan password. Dari info yang didapatkan dari packet 29 tcp streamnya, terdapat keterangan anime 5 kembar source link : `https://skdesu.com/id/gotoubun-hanayome-quintuple`
+5. Kita mendapatkan kemungkinan passsword yang pertama yaitu “nakano”
+6. Decrypt dengan metode des3 dengan command : openssl des -d -salt -in E09.des3-out flag.txt
+7. Change directory ke tempat salt di save as. Kemudian jalankan command tersebut
