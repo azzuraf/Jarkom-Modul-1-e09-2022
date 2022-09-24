@@ -9,14 +9,14 @@
 2. Di wireshark, lakukan filter dengan command http
 3. Pilih salah satu packet, kemudian klik kanan, lalu follow TCP Stream
 4. Liat di hasilnya, find kata “server”, jawabannya Server: nginx/1.10.3
-Hasil: ![Dokumentasi soal nomor 1](.dokumentasi/1.png)
+Hasil:![Dokumentasi soal nomor 1](.dokumentasi/1.png)
 ## Nomor 2
 1. Buka file `soal1-2.pcapng`
 2. Cari yang info nya ada alamat “detail topik” dengan command `http contains "detail"`
 3. Pilih filename 194 dan save
 4. Export object as HTTP dan buka di tempat eksport
 5. Jawabannya Evaluasi unjuk kerja User Space Filesystem (FUSE)
-Hasil: ![Dokumentasi soal nomor 2](.dokumentasi/2.png)
+Hasil:![Dokumentasi soal nomor 2](.dokumentasi/2.png)
 ## Nomor 3
 1. Buka soal `soal3-6.pcapng`
 2. Terapkan display filter `tcp.dstport == 80`
