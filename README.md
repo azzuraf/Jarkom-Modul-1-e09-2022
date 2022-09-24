@@ -53,3 +53,6 @@
 5. Kita mendapatkan kemungkinan passsword yang pertama yaitu “nakano”
 6. Decrypt dengan metode des3 dengan command : openssl des -d -salt -in E09.des3-out flag.txt
 7. Change directory ke tempat salt di save as. Kemudian jalankan command tersebut
+8. Hasil: ![Dokumentasi soal nomor 9.2](./dokumentasi/9.2.png)
+## Nomor 10
+  `JaRkOm2022{8uK4N_CtF_k0k_h3h3h3}`
