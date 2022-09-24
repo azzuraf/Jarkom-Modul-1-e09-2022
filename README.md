@@ -41,4 +41,22 @@
 2. Lakukan ping menggunakan cmd dengan command “ipconfig” untuk mengetahui ip kita
 3. Masukkan filter pada wireshark dengan command “ip.src == <ip yang digunakan>” `ip.src==10.8.108.197`
 7. Hasil:![Dokumentasi soal nomor 7](./dokumentasi/7.png)
+# Nomor 8
+1. Buka file `soal8-10.pcapng`
+2. Lakukan filter dengan `tcp contains "password"` untuk memfilter konten sensitif seperti password misalnya
+3. Lakukan follow tcp stream terhadap paket yang telah ditemukan
+4. Hasil:![image](https://user-images.githubusercontent.com/54592376/192100731-70c8e3c4-9dad-4cd9-a28d-b0376258d3f1.png)
+# Nomor 9
+1. Cari salt yang dimaksud dalam percakapan indikasi kecurangan (ditemukan di stream 29)
+2. View as RAW agar bisa di decrypt
+3. Save file yang diinginkan dengan format `E09.des3`
+4. Hasil:![image](https://user-images.githubusercontent.com/54592376/192100962-640bca44-1a85-4ea6-8692-79f574ff56e4.png)
+# Nomor 10
+1. Lakukan decrypt sesuai dengan petunjuk indikasi kecurangan
+2. Buka terminal dan change directory ke tempat file tersbeut disimpan
+3. Ketik command `openssl des3 -d -salt -in E09.des3 -out flag.txt`
+4. Dari petunjuk kecurangan yang didapat, masukkan "nakano" (tanpa kutip) sebagai password untuk mendecrypt file
+5. Cek File `flag.txt` untuk melihat hasilnya
 
+Hasil Decrypt : JaRkOm2022{8uK4N_CtF_k0k_h3h3h3}
+6. Hasil:![image](https://user-images.githubusercontent.com/54592376/192101149-e2e4ac5c-0120-45f0-bfdc-6cd2f71b9742.png)
